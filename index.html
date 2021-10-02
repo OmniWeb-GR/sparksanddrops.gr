@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="el">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Χειροποίητα κεριά σόγιας, bath bombs και σαπούνια γλυκερίνης">
+        <meta name="keywords" content="κεριά, bath bombs, σαπούνια, χειροποίητα κεριά, σαπούνια γλυκερίνης, κεριά σόγιας, χειροποίητα κεριά σόγιας, χειροποίητα σαπούνια γλυκερίνης, χειροποίητα bath bombs">
+        <meta name="author" content="OmniWeb Digital Agency | omniweb.gr">
+        <meta property="og:title" content="Sparks & Drops">
+        <meta property="og:description" content="Χειροποίητα κεριά σόγιας, bath bombs και σαπούνια γλυκερίνης">
+        <meta property="og:image" content="https://sparksanddrops.gr/logo.png">
+        <meta property="og:url" content="https://sparksanddrops.gr/">
+        <meta property="og:site_name" content="Sparks & Drops">
+        <meta property="og:type" content="website">
+        <meta property="fb:app_id" content="722070559193759">
+        <meta name="twitter:title" content="Sparks & Drops">
+        <meta name="twitter:description" content="Χειροποίητα κεριά σόγιας, bath bombs και σαπούνια γλυκερίνης">
+        <meta name="twitter:image" content="https://sparksanddrops.gr/logo.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:alt" content="Sparks & Drops">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#7700cc">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-modified.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-modified.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7700cc">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <title>Sparks & Drops</title>
+        <style>
+            #logo-image {
+                width: 200px;
+            }
+            @media (min-width: 768px) {
+                #logo-image {
+                    width: 300px;
+                }
+            }
+        </style>
+    </head>
+    <body style="background-color: #7700cc;">
+        <div class="container pt-5">
+            <header id="logo" class="mb-5">
+                <div class="text-center mb-4">
+                    <img id="logo-image" src="logo.png" alt="Sparks & Drops logo" class="rounded-circle img-fluid shadow-lg">
+                </div>
+                <h1 class="text-white text-center">
+                    <span id="h1-top" class="fw-normal">Sparks</span>
+                    <span id="h1-bottom" class="fw-bold">&&nbsp;Drops</span>
+                </h1>
+                <span class="d-block text-center text-white fs-5">Handmade candles & bath products</span>
+            </header>
+            <main class="mb-5">
+                <section id="contact" class="text-center mb-5">
+                    <a href="https://www.instagram.com/sparksanddrops/" class="h3 fw-normal d-inline-block text-white mx-3 mb-2 text-decoration-none" style="white-space: nowrap;">
+                        <i class="bi bi-instagram"></i>
+                        <span>@sparksanddrops</span>
+                    </a>
+                    <a href="https://www.facebook.com/SparksandDrops" class="h3 fw-normal d-inline-block text-white mx-3 mb-2 text-decoration-none" style="white-space: nowrap;">
+                        <i class="bi bi-facebook"></i>
+                        <span>Sparks & Drops</span>
+                    </a>
+                    <a href="mailto:sparksanddrops@hotmail.com" class="h3 fw-normal d-inline-block text-white mx-3 text-decoration-none" style="white-space: nowrap;">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>sparksanddrops@hotmail.com</span>
+                    </a>
+                </section>
+                <section id="instafeed" class="row justify-content-center"></section>
+            </main>
+            <footer class="pb-5">
+                <a href="https://omniweb.gr/" target="_blank" class="d-block text-center">
+                    <span class="d-block text-center text-white">Powered by</span>
+                    <img src="omniweb.png" alt="OmniWeb Digital Agency logo" style="max-width: 150px;" class="rounded">
+                </a>
+            </footer>
+        </div>
+        <script src="instafeed.min.js"></script>
+        <script>
+            var feed = new Instafeed({
+                accessToken: 'IGQVJVSmdoWGtCUXZAtUXRKMDdSN2VPMUl1NGlLcEQ4TkFoN19HUEZASNWZAaS2hqNUlIT29TaTdqSVpyckZAUSUYxOWJLeVVrMlVGdGFsNmtKTE5iRm1GOGhDdUdWRVJXcVBPVmhhSWxSTXBLUGtOYUMtYwZDZD',
+                template: '<div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-3"><div class="ratio ratio-1x1 overflow-hidden rounded"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" class="w-100" style="object-fit: cover; object-position: center;" loading="lazy"></a></div></div>'
+            });
+            feed.run();
+        </script>
+    </body>
+</html>
