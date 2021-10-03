@@ -76,12 +76,17 @@
             </footer>
         </div>
         <script src="instafeed.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5HP7Y1MMT"></script>
         <script>
             var feed = new Instafeed({
                 accessToken: 'IGQVJVSmdoWGtCUXZAtUXRKMDdSN2VPMUl1NGlLcEQ4TkFoN19HUEZASNWZAaS2hqNUlIT29TaTdqSVpyckZAUSUYxOWJLeVVrMlVGdGFsNmtKTE5iRm1GOGhDdUdWRVJXcVBPVmhhSWxSTXBLUGtOYUMtYwZDZD',
                 template: '<div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-3"><div class="ratio ratio-1x1 overflow-hidden rounded"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" class="w-100" style="object-fit: cover; object-position: center;" loading="lazy"></a></div></div>'
             });
             feed.run();
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V5HP7Y1MMT');
         </script>
     </body>
 </html>
