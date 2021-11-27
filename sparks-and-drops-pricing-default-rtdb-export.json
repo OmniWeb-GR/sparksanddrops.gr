@@ -1,0 +1,75 @@
+{
+  "users": {
+    "tr0lDyjj0fSMykN8fdeiMSj9Fhz1": {
+      "constants": {
+        "soy": {
+          "price": 0.0075
+        },
+        "color": {
+          "price": 0.1185,
+          "quantity": 0.0066
+        },
+        "perfume": {
+          "price": 0.10625,
+          "quantity": 0.06
+        },
+        "wicks": 
+          {
+            "name": "Βαμβακερό",
+            "id": 1,
+            "price": 0.062
+          },
+          {
+            "name": "Ξύλινο",
+            "id": 2,
+            "price": 0.6
+          }
+        
+      },
+      "containers" : 
+        {
+          "capacity": 180,
+          "id": 1,
+          "name": "Ποτήρι μαύρο",
+          "price": 3.2
+        },
+        {
+          "capacity": 180,
+          "id": 2,
+          "name": "Ποτήρι διάφανο",
+          "price": 0.85
+        },
+        {
+          "capacity": 220,
+          "id": 3,
+          "name": "Βάζο καραμελέ",
+          "price": 1.9
+        },
+        {
+          "capacity": 25,
+          "id": 4,
+          "name": "Βάζο 40ml",
+          "price": 0.48
+        },
+        {
+          "capacity": 160,
+          "id": 5,
+          "name": "Βάζο 212ml",
+          "price": 0.36
+        },
+        {
+          "capacity": 270,
+          "id": 6,
+          "name": "Βάζο 370ml",
+          "price": 0.73
+        },
+        {
+          "capacity": 230,
+          "id": 7,
+          "name": "Ποτήρι whiskey",
+          "price": 2.7
+        }
+      
+    }
+  }
+}
