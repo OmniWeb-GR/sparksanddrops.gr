@@ -129,5 +129,6 @@
                 </div>
             </footer>
 		<?php endif; ?>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js"></script>
     </body>
 </html>
