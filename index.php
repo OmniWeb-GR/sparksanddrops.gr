@@ -22,12 +22,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <jdoc:include type="metas"/>
     </head>
-    <body class="<?php echo $option . ' ' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task') . ($itemid ? ' itemid-' . $itemid : '') . ($pageclass ? ' ' . $pageclass : '') . ($this->direction == 'rtl' ? ' rtl' : ''); ?>">
+    <body class="bg-primary <?php echo $option . ' ' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task') . ($itemid ? ' itemid-' . $itemid : '') . ($pageclass ? ' ' . $pageclass : '') . ($this->direction == 'rtl' ? ' rtl' : ''); ?>">
 		<?php if ($this->countModules('header')): ?>
 			<header class="header <?php echo $headerclass; ?>">
                 <div class="<?php echo $this->params->get('container-class'); ?>">
                     <div class="row">
-                        <jdoc:include type="modules" name="header" style="none"/>
+                        <jdoc:include type="modules" name="header" style="html5"/>
                     </div>
                 </div>
             </header>
@@ -35,7 +35,7 @@
         <?php if ($this->countModules('below-header')): ?>
 			<div class="<?php echo $this->params->get('container-class'); ?>">
                 <div class="row">
-                    <jdoc:include type="modules" name="below-header" style="none"/>
+                    <jdoc:include type="modules" name="below-header" style="html5"/>
                 </div>
             </div>
 		<?php endif; ?>
@@ -43,21 +43,21 @@
 			<div class="<?php echo $this->params->get('container-class'); ?>">
 				<div class="row">
 					<aside class="col-auto">
-						<jdoc:include type="modules" name="left-sidebar" style="none"/>
+						<jdoc:include type="modules" name="left-sidebar" style="html5"/>
 					</aside>
 					<div class="col">
-						<jdoc:include type="modules" name="above-main" style="none"/>
+						<jdoc:include type="modules" name="above-main" style="html5"/>
 						<main>
 							<?php if ($this->countModules('content')): ?>
-								<jdoc:include type="modules" name="content" style="none"/>
+								<jdoc:include type="modules" name="content" style="html5"/>
 							<?php else: ?>
 								<jdoc:include type="component"/>
 							<?php endif; ?>
 						</main>
-						<jdoc:include type="modules" name="below-main" style="none"/>
+						<jdoc:include type="modules" name="below-main" style="html5"/>
 					</div>
 					<aside class="col-auto">
-						<jdoc:include type="modules" name="right-sidebar" style="none"/>
+						<jdoc:include type="modules" name="right-sidebar" style="html5"/>
 					</aside>
 				</div>
 			</div>
@@ -65,18 +65,18 @@
 			<div class="<?php echo $this->params->get('container-class'); ?>">
 				<div class="row">
 					<aside class="col-auto">
-						<jdoc:include type="modules" name="left-sidebar" style="none"/>
+						<jdoc:include type="modules" name="left-sidebar" style="html5"/>
 					</aside>
 					<div class="col">
-						<jdoc:include type="modules" name="above-main" style="none"/>
+						<jdoc:include type="modules" name="above-main" style="html5"/>
 						<main>
 							<?php if ($this->countModules('content')): ?>
-								<jdoc:include type="modules" name="content" style="none"/>
+								<jdoc:include type="modules" name="content" style="html5"/>
 							<?php else: ?>
 								<jdoc:include type="component"/>
 							<?php endif; ?>
 						</main>
-						<jdoc:include type="modules" name="below-main" style="none"/>
+						<jdoc:include type="modules" name="below-main" style="html5"/>
 					</div>
 				</div>
 			</div>
@@ -84,38 +84,38 @@
 			<div class="<?php echo $this->params->get('container-class'); ?>">
 				<div class="row">
 					<div class="col">
-						<jdoc:include type="modules" name="above-main" style="none"/>
+						<jdoc:include type="modules" name="above-main" style="html5"/>
 						<main>
 							<?php if ($this->countModules('content')): ?>
-								<jdoc:include type="modules" name="content" style="none"/>
+								<jdoc:include type="modules" name="content" style="html5"/>
 							<?php else: ?>
 								<jdoc:include type="component"/>
 							<?php endif; ?>
 						</main>
-						<jdoc:include type="modules" name="below-main" style="none"/>
+						<jdoc:include type="modules" name="below-main" style="html5"/>
 					</div>
 					<aside class="col-auto">
-						<jdoc:include type="modules" name="right-sidebar" style="none"/>
+						<jdoc:include type="modules" name="right-sidebar" style="html5"/>
 					</aside>
 				</div>
 			</div>
         <?php else: ?>
-			<jdoc:include type="modules" name="above-main" style="none"/>
+			<jdoc:include type="modules" name="above-main" style="html5"/>
 			<div class="<?php echo $this->params->get('container-class'); ?>">
 				<main>
 					<?php if ($this->countModules('content')): ?>
-						<jdoc:include type="modules" name="content" style="none"/>
+						<jdoc:include type="modules" name="content" style="html5"/>
 					<?php else: ?>
 						<jdoc:include type="component"/>
 					<?php endif; ?>
 				</main>
 			</div>
-			<jdoc:include type="modules" name="below-main" style="none"/>
+			<jdoc:include type="modules" name="below-main" style="html5"/>
         <?php endif; ?>
         <?php if ($this->countModules('above-footer')): ?>
 			<div class="<?php echo $this->params->get('container-class'); ?>">
                 <div class="row">
-                    <jdoc:include type="modules" name="above-footer" style="none"/>
+                    <jdoc:include type="modules" name="above-footer" style="html5"/>
                 </div>
             </div>
 		<?php endif; ?>
@@ -123,7 +123,7 @@
 			<footer class="footer">
                 <div class="<?php echo $this->params->get('container-class'); ?>">
                     <div class="row">
-                        <jdoc:include type="modules" name="footer" style="none"/>
+                        <jdoc:include type="modules" name="footer" style="html5"/>
                     </div>
                 </div>
             </footer>
