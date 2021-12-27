@@ -1,0 +1,22 @@
+$primary: #7700cc;
+$light: #ffffff;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.logo {
+    width: 200px;
+    @include media-breakpoint-up(md) {
+        width: 300px;
+    }
+}
+
+.overlay {
+    opacity: 0;
+    transition: opacity .3s;
+    .instalink:hover & {
+        @include media-breakpoint-up(lg) {
+            opacity: 1;
+            transition: opacity .3s;
+        }
+    }
+}
