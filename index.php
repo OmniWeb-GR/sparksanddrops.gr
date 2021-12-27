@@ -21,6 +21,7 @@
     <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <jdoc:include type="metas"/>
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css">
     </head>
     <body class="bg-primary <?php echo $option . ' ' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task') . ($itemid ? ' itemid-' . $itemid : '') . ($pageclass ? ' ' . $pageclass : '') . ($this->direction == 'rtl' ? ' rtl' : ''); ?>">
 		<?php if ($this->countModules('header')): ?>
