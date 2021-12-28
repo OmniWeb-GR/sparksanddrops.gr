@@ -18,6 +18,7 @@
 	</files>
 	<positions>
 		<position>header</position>
+		<position>header-inner</position>
 		<position>below-header</position>
         <position>above-main</position>
 		<position>left-sidebar</position>
