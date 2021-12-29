@@ -29,6 +29,9 @@ $light: #ffffff;
     color: $primary;
     .navbar-brand {
         color: $primary;
+        &:hover {
+            color: $primary;
+        }
     }
 }
 
@@ -36,6 +39,9 @@ $light: #ffffff;
     color: $light;
     .navbar-brand {
         color: $light;
+        &:hover {
+            color: $light;
+        }
     }
     .nav-link {
         color: $light;
@@ -43,4 +49,9 @@ $light: #ffffff;
             color: $light;
         }
     }
+}
+
+.navbar-brand img {
+    width: 30px;
+    height: 30px;
 }
