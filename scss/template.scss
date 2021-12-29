@@ -27,14 +27,20 @@ $light: #ffffff;
 
 .header {
     color: $primary;
+    .navbar-brand {
+        color: $primary;
+    }
 }
 
 .footer {
     color: $light;
+    .navbar-brand {
+        color: $light;
+    }
     .nav-link {
         color: $light;
         &:hover {
-            color: $secondary;
+            color: $light;
         }
     }
 }
