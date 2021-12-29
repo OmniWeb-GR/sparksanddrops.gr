@@ -25,9 +25,16 @@ $light: #ffffff;
     margin-bottom: 0;
 }
 
+.header {
+    color: $primary;
+}
+
 .footer {
     color: $light;
     a {
         color: $light;
+        &:hover {
+            color: $secondary;
+        }
     }
 }
