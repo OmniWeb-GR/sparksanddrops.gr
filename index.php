@@ -23,7 +23,7 @@
         <jdoc:include type="metas"/>
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css">
     </head>
-    <body class="bg-primary text-light position-relative <?php echo $option . ' ' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task') . ($itemid ? ' itemid-' . $itemid : '') . ($pageclass ? ' ' . $pageclass : '') . ($this->direction == 'rtl' ? ' rtl' : ''); ?>">
+    <body class="bg-primary text-light <?php echo $option . ' ' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task') . ($itemid ? ' itemid-' . $itemid : '') . ($pageclass ? ' ' . $pageclass : '') . ($this->direction == 'rtl' ? ' rtl' : ''); ?>">
 		<?php if ($this->countModules('header')): ?>
 			<header class="header <?php echo $headerclass; ?>">
                 <div class="<?php echo $this->params->get('container-class'); ?>">
@@ -129,7 +129,9 @@
                 </div>
             </footer>
 		<?php endif; ?>
-		<jdoc:include type="modules" name="mobile-menu" style="html5"/>
+		<div class="fixed-bottom d-md-none">
+			<jdoc:include type="modules" name="mobile-menu" style="html5"/>
+		</div>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/popper.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js"></script>
