@@ -107,7 +107,7 @@ if ($tagId = $params->get('tag_id', ''))
 	}
 }
 ?></ul>
-<ul class="dropdown-menu dropdown-menu-end">
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobile-menu-more">>
 	<li>
 		<a class="dropdown-item" href="/contact" aria-label="Επικοινωνία">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
