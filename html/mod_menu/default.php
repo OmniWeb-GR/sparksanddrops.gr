@@ -49,6 +49,8 @@ if ($tagId = $params->get('tag_id', ''))
 	{
 		$aliasToId = $itemParams->get('aliasoptions');
 
+		echo $aliasToId;
+
 		if (count($path) > 0 && $aliasToId == $path[count($path) - 1])
 		{
 			$class .= ' active';
@@ -81,7 +83,6 @@ if ($tagId = $params->get('tag_id', ''))
 		case 'component':
 		case 'heading':
 		case 'url':
-		case 'alias':
 			require ModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
 			break;
 
