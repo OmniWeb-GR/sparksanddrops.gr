@@ -62,7 +62,10 @@ $light: #ffffff;
         font-size: 1.25rem;
         font-weight: 300;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 3rem;
+        }
     }
 }
 
