@@ -56,7 +56,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 			$right = 'col-lg-6';
 		}
 		else {
-			$left = 'col-12 d-flex align-items-center text-center justify-content-center';
+			$left = 'col-12 text-center';
 			$right = '';
 		}
 		?>
