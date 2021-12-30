@@ -86,3 +86,13 @@ $light: #ffffff;
         color: $light !important;
     }
 }
+
+.mobile-menu {
+    .item-109, .item-103, .item-104 {
+        flex: 1 0 0%;
+    }
+    .item-110 {
+        flex: 0 0 auto;
+        width: auto;
+    }
+}
