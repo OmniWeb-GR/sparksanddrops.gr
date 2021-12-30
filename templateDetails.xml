@@ -26,7 +26,7 @@
         <position>below-main</position>
 		<position>above-footer</position>
 		<position>footer</position>
-		<position>off-canvas</position>
+		<position>mobile-menu</position>
 	</positions>
 	<config>
 		<fields name="params">

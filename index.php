@@ -129,6 +129,11 @@
                 </div>
             </footer>
 		<?php endif; ?>
+		<?php if ($this->countModules('mobile-menu')): ?>
+			<div class="row d-flex d-md-none sticky-bottom">
+                <jdoc:include type="modules" name="mobile-menu" style="html5"/>
+            </div>
+		<?php endif; ?>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/popper.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js"></script>
