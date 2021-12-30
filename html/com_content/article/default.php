@@ -52,7 +52,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 	<div class="row mb-3 mb-lg-5">
 		<?php
 		if (LayoutHelper::render('joomla.content.full_image', $this->item)) {
-			$left = 'col-lg-6 d-flex align-items-center';
+			$left = 'col-lg-6 d-flex align-items-center text-center text-lg-start';
 			$right = 'col-lg-6';
 		}
 		else {
