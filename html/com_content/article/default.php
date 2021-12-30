@@ -35,21 +35,11 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 ?>
 <div class="com-content-article item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? Factory::getApplication()->get('language') : $this->item->language; ?>">
-	<div class="row">
-		<div class="col-lg-6">
-			<?php if ($this->params->get('show_page_heading')) : ?>
-			<div class="page-header">
-				<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
-			</div>
-			<?php endif; ?>
-		</div>
-		<div class="col-lg-6">
-			<?php if ($params->get('access-view')) : ?>
-			<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
-			<?php endif; ?>
-		</div>
+	<?php if ($this->params->get('show_page_heading')) : ?>
+	<div class="page-header">
+		<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
-	<?php
+	<?php endif;
 	if (!empty($this->item->pagination) && !$this->item->paginationposition && $this->item->paginationrelative)
 	{
 		echo $this->item->pagination;
@@ -59,22 +49,32 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 	<?php $useDefList = $params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam; ?>
 
-	<?php if ($params->get('show_title')) : ?>
-	<div class="page-header">
-		<<?php echo $htag; ?> itemprop="headline">
-			<?php echo $this->escape($this->item->title); ?>
-		</<?php echo $htag; ?>>
-		<?php if ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED) : ?>
-			<span class="badge bg-warning text-light"><?php echo Text::_('JUNPUBLISHED'); ?></span>
-		<?php endif; ?>
-		<?php if ($isNotPublishedYet) : ?>
-			<span class="badge bg-warning text-light"><?php echo Text::_('JNOTPUBLISHEDYET'); ?></span>
-		<?php endif; ?>
-		<?php if ($isExpired) : ?>
-			<span class="badge bg-warning text-light"><?php echo Text::_('JEXPIRED'); ?></span>
-		<?php endif; ?>
+	<div class="row">
+		<div class="col-lg-6">
+			<?php if ($params->get('show_title')) : ?>
+			<div class="page-header">
+				<<?php echo $htag; ?> itemprop="headline">
+					<?php echo $this->escape($this->item->title); ?>
+				</<?php echo $htag; ?>>
+				<?php if ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED) : ?>
+					<span class="badge bg-warning text-light"><?php echo Text::_('JUNPUBLISHED'); ?></span>
+				<?php endif; ?>
+				<?php if ($isNotPublishedYet) : ?>
+					<span class="badge bg-warning text-light"><?php echo Text::_('JNOTPUBLISHEDYET'); ?></span>
+				<?php endif; ?>
+				<?php if ($isExpired) : ?>
+					<span class="badge bg-warning text-light"><?php echo Text::_('JEXPIRED'); ?></span>
+				<?php endif; ?>
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="col-lg-6">
+			<?php if ($params->get('access-view')) : ?>
+			<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
+			<?php endif; ?>
+		</div>
 	</div>
-	<?php endif; ?>
+	
 	<?php if ($canEdit) : ?>
 		<?php echo LayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item)); ?>
 	<?php endif; ?>
