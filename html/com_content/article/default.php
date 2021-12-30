@@ -49,7 +49,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 	<?php $useDefList = $params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam; ?>
 
-	<div class="row">
+	<div class="row mb-3 mb-lg-4">
 		<div class="col-lg-6 d-flex align-items-center">
 			<?php if ($params->get('show_title')) : ?>
 			<div class="page-header">

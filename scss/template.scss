@@ -60,7 +60,10 @@ $light: #ffffff;
     max-width: 700px;
 }
 
-.item-image img {
-    width: 100%;
-    height: auto;
+.item-image {
+    margin-bottom: 0;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
