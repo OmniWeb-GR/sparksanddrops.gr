@@ -67,3 +67,10 @@ $light: #ffffff;
         height: auto;
     }
 }
+
+.article-info {
+    color: $light !important;
+    a {
+        color: $light !important;
+    }
+}
