@@ -24,7 +24,7 @@ $authorised = Factory::getUser()->getAuthorisedViewLevels();
 				<?php $tagParams = new Registry($tag->params); ?>
 				<?php $link_class = $tagParams->get('tag_link_class', 'btn-info'); ?>
 				<li class="list-inline-item tag-<?php echo $tag->tag_id; ?> tag-list<?php echo $i; ?>" itemprop="keywords">
-					<a href="<?php echo Route::_(RouteHelper::getTagRoute($tag->tag_id . ':' . $tag->alias)); ?>" class="btn btn-sm rounded-pill py-2 px-3 bg-light text-primary <?php // echo $link_class; ?>">
+					<a href="<?php echo Route::_(RouteHelper::getTagRoute($tag->tag_id . ':' . $tag->alias)); ?>" class="btn btn-sm rounded-pill py-1 px-2 bg-light text-primary <?php // echo $link_class; ?>">
 						<?php echo $this->escape($tag->title); ?>
 					</a>
 				</li>
