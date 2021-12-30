@@ -50,7 +50,17 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam; ?>
 
 	<div class="row mb-3 mb-lg-5">
-		<div class="col-lg-6 d-flex align-items-center">
+		<?php
+		if (LayoutHelper::render('joomla.content.full_image', $this->item)) {
+			$left = 'col-lg-6 d-flex align-items-center';
+			$right = 'col-lg-6';
+		}
+		else {
+			$left = 'col-12 d-flex align-items-center text-center justify-content-center';
+			$right = '';
+		}
+		?>
+		<div class="<?php echo $left; ?>">
 			<?php if ($params->get('show_title')) : ?>
 			<div class="page-header">
 				<<?php echo $htag; ?> itemprop="headline">
@@ -75,11 +85,13 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 			</div>
 			<?php endif; ?>
 		</div>
-		<div class="col-lg-6">
+		<?php if (LayoutHelper::render('joomla.content.full_image', $this->item)) : ?>
+		<div class="<?php echo $right; ?>">
 			<?php if ($params->get('access-view')) : ?>
 			<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
 			<?php endif; ?>
 		</div>
+		<?php endif; ?>
 	</div>
 	
 	<?php if ($canEdit) : ?>
