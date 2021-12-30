@@ -49,18 +49,20 @@ if ($item->menu_image)
 	}
 }
 
-if (($item->id == '110') && (tagId == 'mobile-menu')) {
+if (($item->id == '110') && ($tagId == 'mobile-menu')) {
 	$icon = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16"> <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>';
 	$attributes['role'] = 'button';
 	$attributes['id'] = 'mobile-menu-more';
 	$attributes['data-bs-toggle'] = 'dropdown';
 	$attributes['aria-expanded'] = 'false';
 	$attributes['aria-label'] = $item->title;
-	$linktype = '<span class="icon d-block text-center">' . $icon . '</span>';
+	$attributes['class'] .= 'col-auto';
+	$linktype = '<span class="d-block text-center">' . $icon . '</span>';
 }
-elseif (($aliasToId == '102') && (tagId == 'mobile-menu')) {
+elseif (($aliasToId == '102') && ($tagId == 'mobile-menu')) {
 	$icon = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/> <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg>';
-	$linktype = '<span class="icon d-block text-center">' . $icon . '</span>' . $item->title;
+	$linktype = '<span class="d-block text-center">' . $icon . '</span>' . $item->title;
+	$attributes['class'] .= 'col';
 }
 else {
 	$icon = '';
