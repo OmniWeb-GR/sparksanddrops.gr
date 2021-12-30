@@ -49,8 +49,6 @@ if ($tagId = $params->get('tag_id', ''))
 	{
 		$aliasToId = $itemParams->get('aliasoptions');
 
-		echo $aliasToId;
-
 		if (count($path) > 0 && $aliasToId == $path[count($path) - 1])
 		{
 			$class .= ' active';
