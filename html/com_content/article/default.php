@@ -50,7 +50,7 @@ $isExpired         = !is_null($this->item->publish_down) && $this->item->publish
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') || $assocParam; ?>
 
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-6 d-flex align-items-center">
 			<?php if ($params->get('show_title')) : ?>
 			<div class="page-header">
 				<<?php echo $htag; ?> itemprop="headline">
