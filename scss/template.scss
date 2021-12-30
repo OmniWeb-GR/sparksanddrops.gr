@@ -58,6 +58,11 @@ $light: #ffffff;
 
 .com-content-article__body {
     max-width: 700px;
+    p:first-of-type {
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-align: center;
+    }
 }
 
 .item-image {
