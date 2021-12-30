@@ -70,7 +70,7 @@ else {
 }
 
 if ($icon != '') {
-	$linktype = '<span class="d-block text-center">' . $icon . '</span>' . $item->title;
+	$linktype = '<span class="icon d-block text-center">' . $icon . '</span>' . $item->title;
 }
 
 if ($item->browserNav == 1)
