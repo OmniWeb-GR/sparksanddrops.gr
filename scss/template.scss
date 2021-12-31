@@ -3,6 +3,13 @@ $light: #ffffff;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    padding-bottom: 64px;
+    @include media-breakpoint-up(md) {
+        padding-bottom: 0;
+    }
+}
+
 .logo {
     width: 200px;
     @include media-breakpoint-up(md) {
