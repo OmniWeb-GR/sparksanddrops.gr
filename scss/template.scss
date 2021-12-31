@@ -93,3 +93,13 @@ body {
         color: $light !important;
     }
 }
+
+.dropdown {
+    &-menu {
+        min-width: 0;
+    }
+    &-item {
+        padding: .5rem 1rem;
+        color: $primary;
+    }
+}
