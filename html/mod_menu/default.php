@@ -105,9 +105,6 @@ if ($tagId = $params->get('tag_id', ''))
 	// The next item is shallower.
 	elseif ($item->shallower)
 	{
-		if ($tagId == 'mobile-menu') {
-			echo $dropdown;
-		}
 		echo '</li>';
 		echo str_repeat('</ul></li>', $item->level_diff);
 	}
