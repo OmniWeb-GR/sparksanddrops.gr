@@ -71,7 +71,6 @@ else {
 
 if ($icon != '') {
 	$linktype = '<span class="d-block text-center">' . $icon . '</span>' . $item->title;
-	$attributes['class'] .= ' col';
 }
 
 if ($item->browserNav == 1)

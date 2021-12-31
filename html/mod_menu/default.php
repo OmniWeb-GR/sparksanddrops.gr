@@ -74,6 +74,13 @@ if ($tagId = $params->get('tag_id', ''))
 		$class .= ' parent';
 	}
 
+	if (($aliasToId == '102') || ($item->id == '103') || ($item->id == '104')) {
+		$class .= ' col';
+	}
+	elseif ($item->id == '110') {
+		$class .= ' col-auto';
+	}
+
 	echo '<li class="' . $class . '">';
 
 	switch ($item->type) :
