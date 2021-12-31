@@ -66,7 +66,7 @@ $attributes = array(
 	$readonly ? 'readonly' : '',
 	$dataAttribute,
 	$list,
-	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : ' ',
+	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : 'placeholder=" "',
 	$onchange ? ' onchange="' . $onchange . '"' : '',
 	!empty($maxLength) ? $maxLength : '',
 	$required ? 'required' : '',

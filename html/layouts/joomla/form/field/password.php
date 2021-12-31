@@ -89,7 +89,7 @@ $ariaDescribedBy = $rules ? $name . '-rules ' : '';
 $ariaDescribedBy .= !empty($description) ? $name . '-desc' : '';
 
 $attributes = array(
-	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : ' ',
+	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : 'placeholder=" "',
 	!empty($autocomplete) ? 'autocomplete="' . $autocomplete . '"' : '',
 	!empty($class) ? 'class="form-control ' . $class . '"' : 'class="form-control"',
 	!empty($ariaDescribedBy) ? 'aria-describedby="' . trim($ariaDescribedBy) . '"' : '',

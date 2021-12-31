@@ -64,7 +64,7 @@ $attributes = [
 	!empty($autocomplete) ? 'autocomplete="' . $autocomplete . '"' : '',
 	$multiple ? 'multiple' : '',
 	!empty($maxLength) ? 'maxlength="' . $maxLength . '"' : '',
-	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : ' ',
+	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : 'placeholder=" "',
 	$required ? 'required' : '',
 	$autofocus ? 'autofocus' : '',
 	$dataAttribute,

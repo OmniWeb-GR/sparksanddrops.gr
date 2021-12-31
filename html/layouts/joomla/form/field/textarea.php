@@ -69,7 +69,7 @@ $attributes = array(
 	$rows ?: '',
 	!empty($class) ? 'class="form-control ' . $class . $charcounter . '"' : 'class="form-control' . $charcounter . '"',
 	!empty($description) ? 'aria-describedby="' . $name . '-desc"' : '',
-	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : ' ',
+	strlen($hint) ? 'placeholder="' . htmlspecialchars($hint, ENT_COMPAT, 'UTF-8') . '"' : 'placeholder=" "',
 	$disabled ? 'disabled' : '',
 	$readonly ? 'readonly' : '',
 	$onchange ? 'onchange="' . $onchange . '"' : '',
