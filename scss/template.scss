@@ -114,3 +114,7 @@ body {
 .com-contact {
     max-width: 500px;
 }
+
+.form-floating > textarea.form-control {
+    height: initial;
+}

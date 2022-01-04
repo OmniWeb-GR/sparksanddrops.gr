@@ -35,15 +35,13 @@ HTMLHelper::_('behavior.formvalidator');
 				</fieldset>
 			<?php endif; ?>
 		<?php endforeach; ?>
-		<div class="control-group">
-			<div class="controls">
-				<button class="btn btn-light validate" type="submit"><?php echo Text::_('COM_CONTACT_CONTACT_SEND'); ?></button>
-				<input type="hidden" name="option" value="com_contact">
-				<input type="hidden" name="task" value="contact.submit">
-				<input type="hidden" name="return" value="<?php echo $this->return_page; ?>">
-				<input type="hidden" name="id" value="<?php echo $this->item->slug; ?>">
-				<?php echo HTMLHelper::_('form.token'); ?>
-			</div>
+		<div class="text-center">
+			<button class="btn btn-light validate" type="submit"><?php echo Text::_('COM_CONTACT_CONTACT_SEND'); ?></button>
+			<input type="hidden" name="option" value="com_contact">
+			<input type="hidden" name="task" value="contact.submit">
+			<input type="hidden" name="return" value="<?php echo $this->return_page; ?>">
+			<input type="hidden" name="id" value="<?php echo $this->item->slug; ?>">
+			<?php echo HTMLHelper::_('form.token'); ?>
 		</div>
 	</form>
 </div>
