@@ -55,7 +55,12 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 				echo LayoutHelper::render('joomla.content.intro_image', $this->item);
 			}
 			else {
-				echo LayoutHelper::render('joomla.content.full_image', $this->item);
+				if (LayoutHelper::render('joomla.content.full_image', $this->item)) {
+					echo LayoutHelper::render('joomla.content.full_image', $this->item);
+				}
+				else {
+					echo LayoutHelper::render('joomla.content.alt_image', $this->item);
+				}
 			}
 			?>
 		</div>
