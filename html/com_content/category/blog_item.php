@@ -36,19 +36,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 		<div class="system-unpublished">
 	<?php endif; ?>
 
-	<?php
-		if ((LayoutHelper::render('joomla.content.intro_image', $this->item)) || (LayoutHelper::render('joomla.content.full_image', $this->item))) {
-			$left = 'col-lg-6 d-flex align-items-center text-center text-lg-start order-lg-first';
-			$right = 'col-lg-6 order-lg-last';
-		}
-		else {
-			$left = 'col-12 text-center';
-			$right = '';
-		}
-	?>
-
-	<?php if ((LayoutHelper::render('joomla.content.intro_image', $this->item)) || (LayoutHelper::render('joomla.content.full_image', $this->item))): ?>
-	<div class="<?php echo $right; ?>">
+	<div class="col-lg-6 order-lg-last">
 		<div class="ratio ratio-4x3">
 			<?php
 			if (LayoutHelper::render('joomla.content.intro_image', $this->item)) {
@@ -65,9 +53,8 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 			?>
 		</div>
 	</div>
-	<?php endif; ?>
 
-	<div class="<?php echo $left; ?>">
+	<div class="col-lg-6 d-flex align-items-center text-center text-lg-start order-lg-first">
 		<div class="p-3 pb-0">
 			<?php echo LayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
