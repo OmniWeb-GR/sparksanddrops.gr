@@ -48,7 +48,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 	?>
 
 	<div class="<?php echo $left; ?>">
-		<div class="p-3">
+		<div class="p-3 pb-0">
 			<?php echo LayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
 			<?php if ($canEdit) : ?>
