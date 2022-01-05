@@ -97,13 +97,27 @@ $htag    = $this->params->get('show_page_heading') ? 'h2' : 'h1';
 
 	<?php if (!empty($this->intro_items)) : ?>
 		<?php $blogClass = $this->params->get('blog_class', ''); ?>
+
+
+
+		<?php
+			if ($this->params->get('num_columns') {
+				$columns = explode('-', $this->params->get('num_columns'), 5);
+				$columnclass = '';
+				foreach ($columns as $column) {
+					$columnclass .= 
+				}
+			}
+		?>
+
+
+
 		<?php if ((int) $this->params->get('num_columns') > 1) : ?>
-			<?php $blogClass .= (int) $this->params->get('multi_column_order', 0) === 0 ? ' masonry-' : ' columns-'; ?>
 			<?php $blogClass .= (int) $this->params->get('num_columns'); ?>
 		<?php endif; ?>
-		<div class="com-content-category-blog__items blog-items <?php echo $blogClass; ?>">
+		<div class="row g-3">
 		<?php foreach ($this->intro_items as $key => &$item) : ?>
-			<div class="com-content-category-blog__item blog-item"
+			<div class="com-content-category-blog__item blog-item <?php echo $blogClass; ?>"
 				itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 					<?php
 					$this->item = & $item;
