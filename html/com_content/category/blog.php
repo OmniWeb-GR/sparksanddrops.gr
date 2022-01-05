@@ -98,7 +98,7 @@ $htag    = $this->params->get('show_page_heading') ? 'h2' : 'h1';
 	<?php if (!empty($this->intro_items)) : ?>
 		<?php
 			if ($this->params->get('num_columns') != '1') {
-				$columnspertier = explode('-', $this->params->get('num_columns'), 6);
+				$columnspertier = explode('0', $this->params->get('num_columns'), 6);
 				$tiers = array('-', '-sm-', '-md-', '-lg-', '-xl-', '-xxl-');
 				foreach ($columnspertier as $key=>$columns) {
 					$colclass .= 'col' . $tiers[$key] . round(12 / $columns) . ' ';
