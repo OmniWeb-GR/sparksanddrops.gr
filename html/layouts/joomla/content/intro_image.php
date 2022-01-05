@@ -34,24 +34,24 @@ if ((isset($img->attributes['width']) && (int) $img->attributes['width'] > 0)
 	$extraAttr = ArrayHelper::toString($img->attributes) . ' loading="lazy"';
 }
 ?>
-<figure class="<?php echo htmlspecialchars($imgclass, ENT_COMPAT, 'UTF-8'); ?> item-image">
+<figure class="<?php echo htmlspecialchars($imgclass, ENT_COMPAT, 'UTF-8'); ?> figure">
 	<?php if ($params->get('link_intro_image') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
 		<a href="<?php echo Route::_(RouteHelper::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)); ?>"
 			itemprop="url" title="<?php echo $this->escape($displayData->title); ?>">
-			<img src="<?php echo htmlspecialchars($img->url, ENT_COMPAT, 'UTF-8'); ?>"
+			<img class="figure-img img-fluid rounded" src="<?php echo htmlspecialchars($img->url, ENT_COMPAT, 'UTF-8'); ?>"
 					 <?php echo $alt; ?>
 					 itemprop="thumbnailUrl"
 					 <?php echo $extraAttr; ?>
 			/>
 		</a>
 	<?php else : ?>
-		<img src="<?php echo htmlspecialchars($img->url, ENT_COMPAT, 'UTF-8'); ?>"
+		<img class="figure-img img-fluid rounded" src="<?php echo htmlspecialchars($img->url, ENT_COMPAT, 'UTF-8'); ?>"
 				 <?php echo $alt; ?>
 				 itemprop="thumbnail"
 				 <?php echo $extraAttr; ?>
 		/>
 	<?php endif; ?>
 	<?php if (isset($images->image_intro_caption) && $images->image_intro_caption !== '') : ?>
-		<figcaption class="caption"><?php echo htmlspecialchars($images->image_intro_caption, ENT_COMPAT, 'UTF-8'); ?></figcaption>
+		<figcaption class="figure-caption"><?php echo htmlspecialchars($images->image_intro_caption, ENT_COMPAT, 'UTF-8'); ?></figcaption>
 	<?php endif; ?>
 </figure>
