@@ -38,19 +38,25 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 
 	<div class="col-lg-6 order-lg-last">
 		<div class="ratio ratio-4x3">
-			<?php
-			if (LayoutHelper::render('joomla.content.intro_image', $this->item)) {
-				echo LayoutHelper::render('joomla.content.intro_image', $this->item);
-			}
-			else {
-				if (LayoutHelper::render('joomla.content.full_image', $this->item)) {
-					echo LayoutHelper::render('joomla.content.full_image', $this->item);
-				}
-				else {
-					echo LayoutHelper::render('joomla.content.alt_image', $this->item);
-				}
-			}
-			?>
+			<?php if (LayoutHelper::render('joomla.content.intro_image', $this->item)) : ?>
+				<?php echo LayoutHelper::render('joomla.content.intro_image', $this->item); ?>
+			<?php else : ?>
+				<?php if (LayoutHelper::render('joomla.content.full_image', $this->item)) : ?>
+					<?php echo LayoutHelper::render('joomla.content.full_image', $this->item); ?>
+				<?php else : ?>
+					<?php if ($params->get('link_intro_image') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
+						<a href="<?php echo Route::_(RouteHelper::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)); ?>">
+							<figure class="figure mb-0">
+								<img class="figure-img img-fluid rounded mb-0" src="/images/logo.webp" alt="Sparks & Drops" itemprop="image" width="500" height="500" loading="lazy">
+							</figure>
+						</a>
+					<?php else : ?>
+						<figure class="figure mb-0">
+							<img class="figure-img img-fluid rounded mb-0" src="/images/logo.webp" alt="Sparks & Drops" itemprop="image" width="500" height="500" loading="lazy">
+						</figure>
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 
