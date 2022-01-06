@@ -37,14 +37,14 @@ $extraAttr = ArrayHelper::toString($img->attributes) . ' loading="lazy"';
 	<?php if ($params->get('link_intro_image') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
 		<a href="<?php echo Route::_(RouteHelper::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)); ?>"
 			itemprop="url" title="<?php echo $this->escape($displayData->title); ?>">
-			<img class="figure-img img-fluid rounded mb-0" src="/images/logo.webp"
+			<img class="figure-img img-fluid rounded mb-0" src="https://sparksanddrops.gr/images/logo.webp"
 					 <?php echo $alt; ?>
 					 itemprop="thumbnailUrl"
 					 <?php echo $extraAttr; ?>
 			/>
 		</a>
 	<?php else : ?>
-		<img class="figure-img img-fluid rounded" src="/images/logo.webp"
+		<img class="figure-img img-fluid rounded" src="https://sparksanddrops.gr/images/logo.webp"
 				 <?php echo $alt; ?>
 				 itemprop="thumbnail"
 				 <?php echo $extraAttr; ?>
