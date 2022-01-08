@@ -55,8 +55,7 @@ if (!$list)
 						<?php echo $item->title; ?>
 					</h3>
 				</a>
-				<?php $link = Route::_(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language)); ?>
-				<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $link)); ?>
+				<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $item->link)); ?>
 			</div>
 		</div>
 	</div>
