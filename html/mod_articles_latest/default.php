@@ -21,7 +21,7 @@ if (!$list)
 <div class="mod-articleslatest latestnews mod-list row g-3 justify-content-center">
 <?php foreach ($list as $item) : ?>
 	<div class="col-md-3" itemscope itemtype="https://schema.org/Article">
-		<div class="card bg-transparent border-light h-100">
+		<div class="card bg-transparent border-light h-100 text-center">
 			<div class="ratio ratio-4x3">
 				<?php if (LayoutHelper::render('joomla.content.intro_image', $item)) : ?>
 					<?php echo LayoutHelper::render('joomla.content.intro_image', $item); ?>
@@ -55,18 +55,8 @@ if (!$list)
 						<?php echo $item->title; ?>
 					</h3>
 				</a>
-				<?php if ($params->get('show_readmore') && $item->readmore) :
-					if ($params->get('access-view')) :
-						$link = Route::_(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language));
-					else :
-						$menu = Factory::getApplication()->getMenu();
-						$active = $menu->getActive();
-						$itemId = $active->id;
-						$link = new Uri(Route::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
-						$link->setVar('return', base64_encode(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language)));
-					endif; ?>
-					<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $link)); ?>
-				<?php endif; ?>
+				<?php $link = Route::_(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language)); ?>
+				<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $link)); ?>
 			</div>
 		</div>
 	</div>
