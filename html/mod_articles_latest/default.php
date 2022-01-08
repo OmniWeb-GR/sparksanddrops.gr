@@ -18,9 +18,9 @@ if (!$list)
 }
 
 ?>
-<div class="mod-articleslatest latestnews mod-list row g-3 justify-content-center">
+<div class="mod-articleslatest latestnews mod-list row g-3">
 <?php foreach ($list as $item) : ?>
-	<div class="col-md-3" itemscope itemtype="https://schema.org/Article">
+	<div class="col-md-4" itemscope itemtype="https://schema.org/Article">
 		<div class="card bg-transparent border-light h-100 text-center">
 			<div class="ratio ratio-4x3">
 				<?php if (LayoutHelper::render('joomla.content.intro_image', $item)) : ?>
