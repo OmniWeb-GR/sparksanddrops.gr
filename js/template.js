@@ -1,3 +1,9 @@
+document.querySelector("#instafeed-load-more").addEventListener("click", function() {
+    document.querySelectorAll('.instafeed-item').forEach(function(element) {
+        element.getElementsByClassName.display = 'block';
+    });
+});
+
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
