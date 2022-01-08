@@ -20,6 +20,7 @@ $pageclassclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') 
 ?>
 
 <p class="readmore">
+	<?php echo $pageclass; ?>
 	<?php if (!$params->get('access-view') && ($pageclass != 'home')) : ?>
 		<a class="btn btn-light text-black" href="<?php echo $displayData['link']; ?>" aria-label="<?php echo Text::_('JGLOBAL_REGISTER_TO_READ_MORE') . ' ' . $this->escape($item->title); ?>">
 			<?php echo '<span class="icon-chevron-' . $direction . '" aria-hidden="true"></span>'; ?>
