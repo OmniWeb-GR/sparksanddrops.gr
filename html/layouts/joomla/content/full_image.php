@@ -32,7 +32,7 @@ if ((isset($img->attributes['width']) && (int) $img->attributes['width'] > 0)
 	$extraAttr = ArrayHelper::toString($img->attributes) . ' loading="lazy"';
 }
 ?>
-<figure class="<?php echo htmlspecialchars($imgclass, ENT_COMPAT, 'UTF-8'); ?> figure mb-0">
+<figure class="<?php echo htmlspecialchars($imgclass, ENT_COMPAT, 'UTF-8'); ?> figure mb-0 h-100">
 	<img class="figure-img img-fluid rounded mb-0" src="<?php echo htmlspecialchars($img->url, ENT_COMPAT, 'UTF-8'); ?>"
 			 <?php echo $alt; ?>
 			 itemprop="image"

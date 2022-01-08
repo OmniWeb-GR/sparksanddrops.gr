@@ -57,7 +57,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 							</figure>
 						</a>
 					<?php else : ?>
-						<figure class="figure mb-0">
+						<figure class="figure mb-0 h-100">
 							<img class="figure-img img-fluid rounded mb-0" src="/images/logo.webp" alt="Sparks & Drops" itemprop="image" width="500" height="500" loading="lazy">
 						</figure>
 					<?php endif; ?>
