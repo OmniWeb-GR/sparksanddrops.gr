@@ -16,16 +16,16 @@
 		if ($this->params->get('responsive-sticky-header') == 1) {
 			$headerclass = 'sticky-top';
 		}
-		elseif ($this->params->get('responsive-sticky-header') == 1) {
+		elseif ($this->params->get('responsive-sticky-header') == 2) {
 			$headerclass = 'sticky-sm-top';
 		}
-		elseif ($this->params->get('responsive-sticky-header') == 1) {
+		elseif ($this->params->get('responsive-sticky-header') == 3) {
 			$headerclass = 'sticky-md-top';
 		}
-		elseif ($this->params->get('responsive-sticky-header') == 1) {
+		elseif ($this->params->get('responsive-sticky-header') == 4) {
 			$headerclass = 'sticky-lg-top';
 		}
-		elseif ($this->params->get('responsive-sticky-header') == 1) {
+		elseif ($this->params->get('responsive-sticky-header') == 5) {
 			$headerclass = 'sticky-xl-top';
 		}
 	}
