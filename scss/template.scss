@@ -114,7 +114,7 @@ main a {
 
 .instafeed-item {
     display: none;
-    &:nth-child(-n+8) {
+    &:nth-child(-n+4) {
         display: block;
     }
 }

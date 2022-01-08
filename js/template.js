@@ -1,4 +1,5 @@
 document.querySelector('#instafeed-load-more').addEventListener('click', function() {
+    this.style.display = 'none';
     document.querySelectorAll('.instafeed-item').forEach(function(element) {
         element.style.display = 'block';
     });
