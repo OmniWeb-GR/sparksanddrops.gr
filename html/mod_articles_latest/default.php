@@ -48,25 +48,25 @@ if (!$list)
 						<?php endif; ?>
 					<?php endif; ?>
 				<?php endif; ?>
-				<div class="card-body">
-					<a href="<?php echo $item->link; ?>" class="text-decoration-none" itemprop="url">
-						<h3 class="card-title" itemprop="name">
-							<?php echo $item->title; ?>
-						</h3>
-					</a>
-					<?php if ($params->get('show_readmore') && $item->readmore) :
-						if ($params->get('access-view')) :
-							$link = Route::_(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language));
-						else :
-							$menu = Factory::getApplication()->getMenu();
-							$active = $menu->getActive();
-							$itemId = $active->id;
-							$link = new Uri(Route::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
-							$link->setVar('return', base64_encode(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language)));
-						endif; ?>
-						<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $link)); ?>
-					<?php endif; ?>
-				</div>
+			</div>
+			<div class="card-body">
+				<a href="<?php echo $item->link; ?>" class="text-decoration-none" itemprop="url">
+					<h3 class="card-title" itemprop="name">
+						<?php echo $item->title; ?>
+					</h3>
+				</a>
+				<?php if ($params->get('show_readmore') && $item->readmore) :
+					if ($params->get('access-view')) :
+						$link = Route::_(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language));
+					else :
+						$menu = Factory::getApplication()->getMenu();
+						$active = $menu->getActive();
+						$itemId = $active->id;
+						$link = new Uri(Route::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
+						$link->setVar('return', base64_encode(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language)));
+					endif; ?>
+					<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $link)); ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
