@@ -38,8 +38,6 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 		<div class="system-unpublished">
 	<?php endif; ?>
 
-	<?php echo $params ?>
-
 	<div class="col-lg-6 order-lg-last">
 		<div class="ratio ratio-4x3">
 			<?php if (LayoutHelper::render('joomla.content.intro_image', $this->item)) : ?>
