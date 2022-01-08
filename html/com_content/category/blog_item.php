@@ -82,7 +82,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 				<?php // echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 				<dl class="article-info">
 				<?php if ($params->get('show_category')) : ?>
-					<?php echo $this->sublayout('category', $params); ?>
+					<?php echo $this->item->sublayout('category', $params); ?>
 				<?php endif; ?>
 				</dl>
 			<?php endif; ?>
