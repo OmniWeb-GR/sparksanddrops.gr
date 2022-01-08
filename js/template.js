@@ -1,9 +1,11 @@
-document.querySelector('#instafeed-load-more').addEventListener('click', function() {
-    this.style.display = 'none';
-    document.querySelectorAll('.instafeed-item').forEach(function(element) {
-        element.style.display = 'block';
+if (document.querySelector('.home')) {
+    document.querySelector('#instafeed-load-more').addEventListener('click', function() {
+        this.style.display = 'none';
+        document.querySelectorAll('.instafeed-item').forEach(function(element) {
+            element.style.display = 'block';
+        });
     });
-});
+}
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
