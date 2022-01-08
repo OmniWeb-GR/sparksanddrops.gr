@@ -36,6 +36,8 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 		<div class="system-unpublished">
 	<?php endif; ?>
 
+	<?php echo $this->item; ?>
+
 	<div class="col-lg-6 order-lg-last">
 		<div class="ratio ratio-4x3">
 			<?php if (LayoutHelper::render('joomla.content.intro_image', $this->item)) : ?>
@@ -81,9 +83,9 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 			<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 				<?php // echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 				<dl class="article-info">
-				<?php if ($params->get('show_category')) : ?>
+				<!-- <?php if ($params->get('show_category')) : ?>
 					<?php echo $this->item->sublayout('category', $params); ?>
-				<?php endif; ?>
+				<?php endif; ?> -->
 				</dl>
 			<?php endif; ?>
 			<?php if ($info == 0 && $params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
