@@ -116,5 +116,14 @@ main a {
     display: none;
     &:nth-child(-n+4) {
         display: block;
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
     }
+    &:nth-child(-n+3) {
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
+    
 }
