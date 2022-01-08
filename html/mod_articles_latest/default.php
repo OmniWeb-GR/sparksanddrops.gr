@@ -56,7 +56,7 @@ if (!$list)
 					</h3>
 				</a>
 			</div>
-			<div class="card-footer bg-transparent border-0">
+			<div class="card-footer bg-transparent border-0 pt-0 pb-1">
 				<?php echo LayoutHelper::render('joomla.content.readmore', array('item' => $item, 'params' => $params, 'link' => $item->link)); ?>
 			</div>
 		</div>
