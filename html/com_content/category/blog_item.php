@@ -16,7 +16,6 @@ use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 use Joomla\Component\Content\Administrator\Extension\ContentComponent;
 use Joomla\Component\Content\Site\Helper\RouteHelper;
-use Joomla\CMS\Language\Text;
 
 // Create a shortcut for params.
 $params = $this->item->params;
@@ -82,8 +81,8 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 			<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 				<?php // echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 				<dl class="article-info">
-				<?php if ($displayData['params']->get('show_category')) : ?>
-					<?php echo $this->sublayout('category', $displayData); ?>
+				<?php if ($this->item->displayData['params']->get('show_category')) : ?>
+					<?php echo $this->sublayout('category', $this->item->displayData); ?>
 				<?php endif; ?>
 				</dl>
 			<?php endif; ?>
