@@ -116,6 +116,9 @@ main a {
     display: none;
     &:nth-child(-n+4) {
         display: block;
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
         @include media-breakpoint-up(lg) {
             display: block;
         }
