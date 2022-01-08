@@ -80,6 +80,11 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 
 			<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 				<?php // echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
+				<dl class="article-info">
+				<?php if ($displayData['params']->get('show_category')) : ?>
+					<?php echo $this->sublayout('category', $displayData); ?>
+				<?php endif; ?>
+				</dl>
 			<?php endif; ?>
 			<?php if ($info == 0 && $params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
 				<?php // echo LayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
