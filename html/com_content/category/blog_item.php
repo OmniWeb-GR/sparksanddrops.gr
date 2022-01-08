@@ -83,9 +83,20 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 			<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 				<?php // echo LayoutHelper::render('joomla.content.info_block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 				<dl class="article-info">
-				<!-- <?php if ($params->get('show_category')) : ?>
-					<?php echo $this->item->sublayout('category', $params); ?>
-				<?php endif; ?> -->
+				<?php if ($params->get('show_category')) : ?>
+					<dd class="category-name">
+						<?php $title = $this->escape($this->item->category_title); ?>
+						<?php if ($params->get('link_category') && $this->item->catid) : ?>
+							<?php $url = '<a href="' . Route::_(
+								RouteHelper::getCategoryRoute($this->item->catid, $this->item->category_language)
+								)
+								. '" itemprop="genre">' . $title . '</a>'; ?>
+							<?php echo Text::sprintf('COM_CONTENT_CATEGORY', $url); ?>
+						<?php else : ?>
+							<?php echo Text::sprintf('COM_CONTENT_CATEGORY', '<span itemprop="genre">' . $title . '</span>'); ?>
+						<?php endif; ?>
+					</dd>
+				<?php endif; ?>
 				</dl>
 			<?php endif; ?>
 			<?php if ($info == 0 && $params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
