@@ -10,6 +10,7 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Layout\LayoutHelper;
+use Joomla\CMS\Language\Text;
 
 if (!$list)
 {
