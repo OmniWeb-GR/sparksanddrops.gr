@@ -49,7 +49,7 @@ if (!$list)
 					<?php endif; ?>
 				<?php endif; ?>
 				<div class="card-body">
-					<a href="<?php echo $item->link; ?>" itemprop="url">
+					<a href="<?php echo $item->link; ?>" class="text-decoration-none" itemprop="url">
 						<h3 class="card-title" itemprop="name">
 							<?php echo $item->title; ?>
 						</h3>

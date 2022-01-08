@@ -25,7 +25,7 @@ $currentDate = Factory::getDate()->format('Y-m-d H:i:s');
 		<?php if ($params->get('show_title')) : ?>
 			<h2 itemprop="name">
 				<?php if ($params->get('link_titles') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
-					<a class="text-white text-decoration-none" href="<?php echo Route::_(
+					<a class="text-decoration-none" href="<?php echo Route::_(
 						RouteHelper::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)
 					); ?>" itemprop="url">
 						<?php echo $this->escape($displayData->title); ?>
