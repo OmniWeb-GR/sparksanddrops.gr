@@ -18,7 +18,7 @@ $item      = $displayData['item'];
 $direction = Factory::getLanguage()->isRtl() ? 'left' : 'right';
 $app = Factory::getApplication();
 $menu = $app->getMenu()->getActive();
-$pageclassclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
+$pageclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
 ?>
 
 <p class="readmore">
