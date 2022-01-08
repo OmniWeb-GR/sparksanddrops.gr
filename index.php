@@ -134,9 +134,9 @@
 		</div>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/popper.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js"></script>
 		<?php if ($pageclass == 'home'): ?>
 			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/instafeed.min.js"></script>
 		<?php endif; ?>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js"></script>
     </body>
 </html>
