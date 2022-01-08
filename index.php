@@ -13,7 +13,21 @@
 	$lang = explode('-', $this->language);
 	$headerclass='';
 	if ($this->params->get('sticky-header') == 1) {
-		$headerclass = 'sticky-top';
+		if ($this->params->get('responsive-sticky-header') == 1) {
+			$headerclass = 'sticky-top';
+		}
+		elseif ($this->params->get('responsive-sticky-header') == 1) {
+			$headerclass = 'sticky-sm-top';
+		}
+		elseif ($this->params->get('responsive-sticky-header') == 1) {
+			$headerclass = 'sticky-md-top';
+		}
+		elseif ($this->params->get('responsive-sticky-header') == 1) {
+			$headerclass = 'sticky-lg-top';
+		}
+		elseif ($this->params->get('responsive-sticky-header') == 1) {
+			$headerclass = 'sticky-xl-top';
+		}
 	}
 ?>
 <!DOCTYPE html>
