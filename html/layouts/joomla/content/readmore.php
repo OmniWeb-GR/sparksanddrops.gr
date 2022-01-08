@@ -16,6 +16,8 @@ use Joomla\CMS\Language\Text;
 $params    = $displayData['params'];
 $item      = $displayData['item'];
 $direction = Factory::getLanguage()->isRtl() ? 'left' : 'right';
+$app = Factory::getApplication();
+$menu = $app->getMenu()->getActive();
 $pageclassclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
 ?>
 
