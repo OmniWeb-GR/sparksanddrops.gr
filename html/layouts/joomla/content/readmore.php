@@ -39,8 +39,7 @@ $pageclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
 		</a>
 	<?php else : ?>
 		<a class="btn btn-light text-black" href="<?php echo $displayData['link']; ?>" aria-label="<?php echo Text::sprintf('JGLOBAL_READ_MORE_TITLE', $this->escape($item->title)); ?>">
-			<?php echo '<span class="icon-chevron-' . $direction . '" aria-hidden="true"></span>'; ?>
-			<?php echo Text::sprintf('JGLOBAL_READ_MORE_TITLE', HTMLHelper::_('string.truncate', $item->title, $params->get('readmore_limit'))); ?>
+			<?php echo Text::_('JGLOBAL_READ_MORE'); ?>
 		</a>
 	<?php endif; ?>
 </p>
