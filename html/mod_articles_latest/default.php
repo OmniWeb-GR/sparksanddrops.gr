@@ -59,8 +59,8 @@ if (!$list)
 					</p>
 				</div>
 			</div>
-		</a>
-</div>
+		</div>
+	</div>
 <?php endforeach; ?>
 </div>
 
