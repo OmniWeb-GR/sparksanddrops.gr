@@ -36,7 +36,16 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 		<div class="system-unpublished">
 	<?php endif; ?>
 
-	<?php echo $this->item; ?>
+	<table>
+    <?php foreach ($this->item as $value) : ?>
+        <tr>
+        <?php foreach ($value as $key => $data): ?>
+            <td><?php echo $key; ?></td>
+            <td><?php echo $value; ?></td>
+        <?php endforeach; ?>
+        </tr>
+    <?php endforeach; ?>
+	</table>
 
 	<div class="col-lg-6 order-lg-last">
 		<div class="ratio ratio-4x3">
