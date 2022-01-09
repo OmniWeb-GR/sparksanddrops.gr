@@ -67,7 +67,7 @@ main a {
     height: 30px;
 }
 
-.com-content-article__body {
+.wiki .com-content-article__body {
     max-width: 700px;
     p:first-of-type {
         font-size: 1.25rem;
@@ -78,6 +78,10 @@ main a {
             margin-bottom: 3rem;
         }
     }
+}
+
+.blog {
+    max-width: 1000px;
 }
 
 .dropdown {
