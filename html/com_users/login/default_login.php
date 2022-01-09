@@ -24,7 +24,7 @@ $usersConfig = ComponentHelper::getParams('com_users');
 <div class="com-users-login login mx-auto">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<div class="page-header">
-		<h1>
+		<h1 class="text-center">
 			<?php echo $this->escape($this->params->get('page_heading')); ?>
 		</h1>
 	</div>
