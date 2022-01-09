@@ -43,13 +43,11 @@ use Joomla\CMS\Router\Route;
 	<?php endif; ?>
 
 	<form action="<?php echo Route::_('index.php?option=com_users&task=user.logout'); ?>" method="post" class="com-users-logout__form form-horizontal well">
-		<div class="com-users-logout__submit control-group">
-			<div class="controls">
-				<button type="submit" class="btn btn-primary">
-					<span class="icon-backward-2 icon-white" aria-hidden="true"></span>
-					<?php echo Text::_('JLOGOUT'); ?>
-				</button>
-			</div>
+		<div class="com-users-logout__submit text-center">
+			<button type="submit" class="btn btn-light">
+				<!-- <span class="icon-backward-2 icon-white" aria-hidden="true"></span> -->
+				<?php echo Text::_('JLOGOUT'); ?>
+			</button>
 		</div>
 		<?php if ($this->params->get('logout_redirect_url')) : ?>
 			<input type="hidden" name="return" value="<?php echo base64_encode($this->params->get('logout_redirect_url', $this->form->getValue('return'))); ?>">
