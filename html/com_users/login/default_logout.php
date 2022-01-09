@@ -15,13 +15,13 @@ use Joomla\CMS\Router\Route;
 
 ?>
 <div class="com-users-logout logout">
-	<?php if ($this->params->get('show_page_heading')) : ?>
-	<div class="page-header">
+	<?php // if ($this->params->get('show_page_heading')) : ?>
+	<!-- <div class="page-header">
 		<h1>
-			<?php echo $this->escape($this->params->get('page_heading')); ?>
+			<?php // echo $this->escape($this->params->get('page_heading')); ?>
 		</h1>
-	</div>
-	<?php endif; ?>
+	</div> -->
+	<?php // endif; ?>
 
 	<?php if (($this->params->get('logoutdescription_show') == 1 && str_replace(' ', '', $this->params->get('logout_description')) != '')|| $this->params->get('logout_image') != '') : ?>
 		<div class="com-users-logout__description logout-description">
