@@ -21,7 +21,7 @@ HTMLHelper::_('behavior.formvalidator');
 $usersConfig = ComponentHelper::getParams('com_users');
 
 ?>
-<div class="com-users-login login">
+<div class="com-users-login login mx-auto">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<div class="page-header">
 		<h1>
