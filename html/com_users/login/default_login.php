@@ -102,12 +102,10 @@ $usersConfig = ComponentHelper::getParams('com_users');
 				</div>
 			<?php endforeach; ?>
 
-			<div class="com-users-login__submit control-group">
-				<div class="controls">
-					<button type="submit" class="btn btn-primary">
-						<?php echo Text::_('JLOGIN'); ?>
-					</button>
-				</div>
+			<div class="com-users-login__submit text-center">
+				<button type="submit" class="btn btn-light">
+					<?php echo Text::_('JLOGIN'); ?>
+				</button>
 			</div>
 
 			<?php $return = $this->form->getValue('return', '', $this->params->get('login_redirect_url', $this->params->get('login_redirect_menuitem'))); ?>
@@ -116,18 +114,18 @@ $usersConfig = ComponentHelper::getParams('com_users');
 		</fieldset>
 	</form>
 </div>
-<div>
+<!-- <div>
 	<div class="com-users-login__options list-group">
 		<a class="com-users-login__reset list-group-item" href="<?php echo Route::_('index.php?option=com_users&view=reset'); ?>">
-			<?php echo Text::_('COM_USERS_LOGIN_RESET'); ?>
+			<?php // echo Text::_('COM_USERS_LOGIN_RESET'); ?>
 		</a>
 		<a class="com-users-login__remind list-group-item" href="<?php echo Route::_('index.php?option=com_users&view=remind'); ?>">
-			<?php echo Text::_('COM_USERS_LOGIN_REMIND'); ?>
+			<?php // echo Text::_('COM_USERS_LOGIN_REMIND'); ?>
 		</a>
-		<?php if ($usersConfig->get('allowUserRegistration')) : ?>
+		<?php // if ($usersConfig->get('allowUserRegistration')) : ?>
 			<a class="com-users-login__register list-group-item" href="<?php echo Route::_('index.php?option=com_users&view=registration'); ?>">
-				<?php echo Text::_('COM_USERS_LOGIN_REGISTER'); ?>
+				<?php // echo Text::_('COM_USERS_LOGIN_REGISTER'); ?>
 			</a>
-		<?php endif; ?>
+		<?php // endif; ?>
 	</div>
-</div>
+</div> -->
