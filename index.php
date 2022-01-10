@@ -11,6 +11,7 @@
     $menu = $app->getMenu()->getActive();
     $pageclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
 	$lang = explode('-', $this->language);
+	$vnqs = $this->params->get('vnqs');
 	$headerclass='';
 	if ($this->params->get('sticky-header') == 1) {
 		if ($this->params->get('responsive-sticky-header') == 1) {
@@ -35,7 +36,7 @@
     <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <jdoc:include type="metas"/>
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css">
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css?v=<?php echo $vnqs; ?>">
     </head>
     <body class="bg-primary text-light <?php echo $option . ' ' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task') . ($itemid ? ' itemid-' . $itemid : '') . ($pageclass ? ' ' . $pageclass : '') . ($this->direction == 'rtl' ? ' rtl' : ''); ?>">
 		<?php if ($this->countModules('header')): ?>
@@ -149,8 +150,8 @@
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/popper.min.js"></script>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
 		<?php if ($pageclass == 'home'): ?>
-			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/instafeed.min.js"></script>
+			<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/instafeed.min.js?v=<?php echo $vnqs; ?>"></script>
 		<?php endif; ?>
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js"></script>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/template.js?v=<?php echo $vnqs; ?>"></script>
     </body>
 </html>
