@@ -17,7 +17,7 @@ use Joomla\CMS\Uri\Uri;
 use Joomla\Component\Content\Administrator\Extension\ContentComponent;
 use Joomla\Component\Content\Site\Helper\RouteHelper;
 use Joomla\CMS\Language\Text;
-// use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\HTML\HTMLHelper;
 
 // Create a shortcut for params.
 $params = $this->item->params;
@@ -95,6 +95,13 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 						<?php else : ?>
 							<?php echo Text::sprintf('COM_CONTENT_CATEGORY', '<span itemprop="genre">' . $title . '</span>'); ?>
 						<?php endif; ?>
+					</dd>
+				<?php endif; ?>
+				<?php if ($params->get('show_publish_date')) : ?>
+					<dd class="published">
+						<time datetime="<?php echo HTMLHelper::_('date', $displayData['item']->publish_up, 'c'); ?>" itemprop="datePublished">
+							<?php echo Text::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', HTMLHelper::_('date', $displayData['item']->publish_up, Text::_('DATE_FORMAT_LC3'))); ?>
+						</time>
 					</dd>
 				<?php endif; ?>
 				</dl>
