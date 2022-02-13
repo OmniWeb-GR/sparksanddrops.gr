@@ -37,7 +37,6 @@
 					default="container"
 					label="Container class"
 					filter="string"
-					showon="brand:1"
 				/>
 				<field
 					name="sticky-header"
@@ -56,6 +55,7 @@
 					label="Responsive sticky header"
 					default="1"
 					filter="integer"
+					showon="sticky-header:1"
 				>
 					<option value="1">XS and up</option>
 					<option value="2">SM and up</option>
@@ -65,11 +65,10 @@
 				</field>
 				<field
 					name="vnqs"
-					type="text"
+					type="number"
 					default="0"
 					label="Version number query string"
 					filter="string"
-					showon="brand:1"
 				/>
 			</fieldset>
 		</fields>
