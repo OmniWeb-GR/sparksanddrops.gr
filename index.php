@@ -12,7 +12,7 @@
     $pageclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
 	$lang = explode('-', $this->language);
 	// $vnqs = $this->params->get('vnqs');
-	$vnqs = '1';
+	$vnqs = '2';
 	$headerclass='';
 	if ($this->params->get('sticky-header') == 1) {
 		if ($this->params->get('responsive-sticky-header') == 1) {
